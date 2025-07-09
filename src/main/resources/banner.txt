@@ -1,0 +1,3 @@
+${AnsiColor.DEFAULT}>>> ${application.title}
+${AnsiColor.DEFAULT}>>> Version: ${application.version}
+${AnsiColor.DEFAULT}>>> Spring:  ${spring-boot.version}
