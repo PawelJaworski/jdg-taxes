@@ -1,6 +1,6 @@
 package pl.pjaworski.jdgtaxes.application.incometax;
 
-import java.time.YearMonth;
+import java.math.BigDecimal;
 
-public record IncomeTaxReadModel(String nip, YearMonth month) {
+public record IncomeTaxReadModel(BigDecimal tax) {
 }

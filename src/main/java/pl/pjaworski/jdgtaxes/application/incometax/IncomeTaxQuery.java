@@ -1,10 +1,6 @@
 package pl.pjaworski.jdgtaxes.application.incometax;
 
-import org.springframework.stereotype.Component;
+import java.time.YearMonth;
 
-@Component
-class IncomeTaxQuery {
-    IncomeTaxReadModel calculateIncomeTaxQuery(String nip) {
-        return null;
-    }
+public record IncomeTaxQuery(String nip, YearMonth month) {
 }
