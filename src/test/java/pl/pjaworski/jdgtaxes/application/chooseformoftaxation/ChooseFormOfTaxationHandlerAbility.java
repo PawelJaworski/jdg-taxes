@@ -1,11 +1,13 @@
 package pl.pjaworski.jdgtaxes.application.chooseformoftaxation;
 
+import pl.pjaworski.jdgtaxes.domain.TaxPayerEventsAbility;
+
 import java.util.function.Consumer;
 
 import static pl.pjaworski.jdgtaxes.testutil.TestDataExamples.NIP;
 
 public interface ChooseFormOfTaxationHandlerAbility {
-    ChooseFormOfTaxationHandler INSTANCE = new ChooseFormOfTaxationHandler();
+    ChooseFormOfTaxationHandler INSTANCE = new ChooseFormOfTaxationHandler(TaxPayerEventsAbility.INSTANCE);
 
     default void choose_form_of_taxation(Consumer<ChooseFormOfTaxationCmd.ChooseFormOfTaxationCmdBuilder> useCase) {
         var cmd = ChooseFormOfTaxationCmd.builder()
