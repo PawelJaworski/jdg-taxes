@@ -6,3 +6,5 @@ build/
 *.iws
 *.iml
 *.ipr
+
+jdg-taxes.sql
