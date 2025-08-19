@@ -8,3 +8,4 @@ build/
 *.ipr
 
 jdg-taxes.sql
+public/spock-reports

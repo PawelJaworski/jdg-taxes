@@ -11,7 +11,7 @@ import spock.lang.Specification
 @ActiveProfiles('test')
 @SpringBootTest
 class AbstractIntegrationTest extends Specification implements ChooseFormOfTaxationHandlerAbility, IssueInvoiceHandlerAbility,
-        IncomeTaxProjectorAbility, TaxPayerEventsAbility {
+        IncomeTaxProjectorAbility, TaxPayerEventsAbility, TestDataExamples {
 
     def setup() {
         cleanupTaxPayerEvents()

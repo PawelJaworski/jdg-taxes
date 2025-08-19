@@ -7,7 +7,7 @@ import pl.pjaworski.jdgtaxes.domain.TaxPayerEventsAbility
 import spock.lang.Specification
 
 class AbstractUnitTest extends Specification implements ChooseFormOfTaxationHandlerAbility, IssueInvoiceHandlerAbility,
-        IncomeTaxProjectorAbility, TaxPayerEventsAbility {
+        IncomeTaxProjectorAbility, TaxPayerEventsAbility, TestDataExamples {
 
     def setup() {
         cleanupTaxPayerEvents()
