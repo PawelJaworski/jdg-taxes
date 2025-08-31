@@ -13,11 +13,11 @@ public interface IncomeTaxProjectorAbility {
     default BigDecimal calculate_income_tax(YearMonth yearMonth) {
         var query = new IncomeTaxQuery(NIP, yearMonth);
 
-        return  getIncomeTaxQuery().calculateIncomeTax(query)
+        return  getIncomeTaxProjector().calculateIncomeTax(query)
                 .tax();
     }
 
-    default IncomeTaxProjector getIncomeTaxQuery() {
+    default IncomeTaxProjector getIncomeTaxProjector() {
         return INSTANCE;
     }
 }

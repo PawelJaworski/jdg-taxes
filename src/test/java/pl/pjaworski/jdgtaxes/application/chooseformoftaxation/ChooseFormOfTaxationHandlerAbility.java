@@ -9,11 +9,13 @@ import static pl.pjaworski.jdgtaxes.testutil.TestDataExamples.NIP;
 public interface ChooseFormOfTaxationHandlerAbility {
     ChooseFormOfTaxationHandler INSTANCE = new ChooseFormOfTaxationHandler(TaxPayerEventsAbility.INSTANCE);
 
-    default void choose_form_of_taxation(Consumer<ChooseFormOfTaxationCmd.ChooseFormOfTaxationCmdBuilder> useCase) {
+    default ChooseFormOfTaxationCmd choose_form_of_taxation(Consumer<ChooseFormOfTaxationCmd.ChooseFormOfTaxationCmdBuilder> useCase) {
         var cmd = ChooseFormOfTaxationCmd.builder()
                 .nip(NIP);
         useCase.accept(cmd);
         getChooseFormOfTaxationHandler().chooseFormOfTaxation(cmd.build());
+
+        return cmd.build();
     }
 
     default ChooseFormOfTaxationHandler getChooseFormOfTaxationHandler() {

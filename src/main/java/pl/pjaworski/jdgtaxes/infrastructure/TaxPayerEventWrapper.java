@@ -5,9 +5,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Immutable;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
+import pl.pjaworski.jdgtaxes.domain.FormOfTaxationChosenEvent;
+import pl.pjaworski.jdgtaxes.domain.InvoiceIssuedEvent;
 import pl.pjaworski.jdgtaxes.domain.TaxPayerEvent;
 
 import java.util.UUID;
@@ -20,11 +22,26 @@ public class TaxPayerEventWrapper {
     @GeneratedValue
     private UUID id;
 
-    public TaxPayerEventWrapper(TaxPayerEvent taxPayerEvent) {
+    @JdbcTypeCode(SqlTypes.JSON)
+    private FormOfTaxationChosenEvent formOfTaxationChosenEvent;
 
+    @JdbcTypeCode(SqlTypes.JSON)
+    private InvoiceIssuedEvent invoiceIssuedEvent;
+
+    public TaxPayerEventWrapper(TaxPayerEvent taxPayerEvent) {
+        switch (taxPayerEvent) {
+            case FormOfTaxationChosenEvent formOfTaxationChosenEvent:
+                this.formOfTaxationChosenEvent = formOfTaxationChosenEvent;
+                break;
+            case InvoiceIssuedEvent invoiceIssuedEvent:
+                this.invoiceIssuedEvent = invoiceIssuedEvent;
+                break;
+            default:
+                throw new IllegalArgumentException();
+        }
     }
 
     public TaxPayerEvent toTaxPayerEvent() {
-        return null;
+        return formOfTaxationChosenEvent != null ? formOfTaxationChosenEvent : invoiceIssuedEvent;
     }
 }
