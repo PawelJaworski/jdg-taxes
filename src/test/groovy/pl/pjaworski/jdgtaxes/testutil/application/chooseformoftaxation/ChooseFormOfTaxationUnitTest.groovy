@@ -1,7 +1,0 @@
-package pl.pjaworski.jdgtaxes.testutil.application.chooseformoftaxation
-
-import pl.pjaworski.jdgtaxes.application.chooseformoftaxation.ChooseFormOfTaxationHandlerAbility
-import pl.pjaworski.jdgtaxes.testutil.AbstractUnitTest
-
-class ChooseFormOfTaxationUnitTest extends AbstractUnitTest implements ChooseFormOfTaxationHandlerAbility {
-}
