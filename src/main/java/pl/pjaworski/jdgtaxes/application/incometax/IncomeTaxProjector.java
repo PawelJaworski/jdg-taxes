@@ -1,7 +1,6 @@
 package pl.pjaworski.jdgtaxes.application.incometax;
 
 import lombok.RequiredArgsConstructor;
-import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Component;
 import pl.pjaworski.jdgtaxes.domain.FormOfTaxationChosenEvent;
 import pl.pjaworski.jdgtaxes.domain.FormOfTaxationType;
