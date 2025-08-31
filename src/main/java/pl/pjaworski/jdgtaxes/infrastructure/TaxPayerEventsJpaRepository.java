@@ -1,6 +1,7 @@
 package pl.pjaworski.jdgtaxes.infrastructure;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.context.annotation.Profile;
 import org.springframework.data.jpa.repository.JpaRepository;
 import pl.pjaworski.jdgtaxes.domain.TaxPayerEvent;
 import pl.pjaworski.jdgtaxes.domain.TaxPayerEvents;
@@ -8,7 +9,7 @@ import pl.pjaworski.jdgtaxes.domain.TaxPayerEvents;
 import java.util.List;
 import java.util.UUID;
 
-@ConditionalOnMissingBean(TaxPayerEvents.class)
+@Profile("jpa")
 public interface TaxPayerEventsJpaRepository extends JpaRepository<TaxPayerEventWrapper, UUID>, TaxPayerEvents {
 
     @Override

@@ -13,7 +13,7 @@ import pl.pjaworski.jdgtaxes.domain.TaxPayerEvents
 import pl.pjaworski.jdgtaxes.domain.TaxPayerEventsAbility
 import spock.lang.Specification
 
-@ActiveProfiles('test')
+@ActiveProfiles(['test', 'jpa'])
 @SpringBootTest
 class AbstractIntegrationTest extends Specification implements ChooseFormOfTaxationHandlerAbility, IssueInvoiceHandlerAbility,
         IncomeTaxProjectorAbility, TaxPayerEventsAbility, TestDataExamples {
