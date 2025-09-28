@@ -1,4 +1,6 @@
 package pl.pjaworski.jdgtaxes.domain;
 
-public record FormOfTaxationChosenEvent(String nip, FormOfTaxationType formOfTaxation) implements TaxPayerEvent {
+import lombok.NonNull;
+
+public record FormOfTaxationChosenEvent(@NonNull String nip, @NonNull FormOfTaxationType formOfTaxation) implements TaxPayerEvent {
 }
