@@ -7,7 +7,7 @@ import spock.lang.Specification
 
 @Ignore
 @SpringBootTest
-@ActiveProfiles(["test", "sql-ddl"])
+@ActiveProfiles(["jpa", "test", "sql-ddl"])
 class SqlDdlGenerationIntegrationTest extends Specification {
     def "should generate sql"() {
         expect:

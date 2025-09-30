@@ -5,6 +5,8 @@ import pl.pjaworski.jdgtaxes.testutil.AbstractUnitTest
 import spock.lang.See
 
 import static pl.pjaworski.jdgtaxes.domain.FormOfTaxationType.LUMP_SUM_12
+import static pl.pjaworski.jdgtaxes.domain.FormOfTaxationType.LUMP_SUM_12
+import static pl.pjaworski.jdgtaxes.domain.FormOfTaxationType.PROGRESSIVE_TAX_SCALE
 import static pl.pjaworski.jdgtaxes.domain.FormOfTaxationType.PROGRESSIVE_TAX_SCALE
 
 /**
