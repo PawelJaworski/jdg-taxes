@@ -1,4 +1,4 @@
-package pl.pjaworski.jdgtaxes.testutil.application.incometax
+package pl.pjaworski.jdgtaxes.application.incometax
 
 import pl.pjaworski.jdgtaxes.domain.FormOfTaxationType
 import pl.pjaworski.jdgtaxes.testutil.AbstractUnitTest
