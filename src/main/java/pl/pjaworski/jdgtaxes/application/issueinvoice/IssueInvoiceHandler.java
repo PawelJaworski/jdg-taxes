@@ -11,6 +11,6 @@ class IssueInvoiceHandler {
     private final TaxPayerEvents taxPayerEvents;
 
     void issueInvoice(IssueInvoiceCmd cmd) {
-
+        taxPayerEvents.registerTaxPayerEvent(new InvoiceIssuedEvent(cmd.nip(), cmd.invoiceDate(), cmd.amountNet()));
     }
 }

@@ -11,6 +11,6 @@ class ChooseFormOfTaxationHandler {
     private final TaxPayerEvents taxPayerEvents;
 
     void chooseFormOfTaxation(ChooseFormOfTaxationCmd cmd) {
-
+        taxPayerEvents.registerTaxPayerEvent(new FormOfTaxationChosenEvent(cmd.nip(), cmd.formOfTaxation()));
     }
 }

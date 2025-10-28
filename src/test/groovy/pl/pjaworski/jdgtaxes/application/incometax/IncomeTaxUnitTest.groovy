@@ -4,6 +4,8 @@ import pl.pjaworski.jdgtaxes.domain.FormOfTaxationType
 import pl.pjaworski.jdgtaxes.testutil.AbstractUnitTest
 import spock.lang.Ignore
 
+import static pl.pjaworski.jdgtaxes.domain.FormOfTaxationType.LUMP_SUM_12
+
 /**
  * Lump sum - ryczalt
  * Progressive tax - skala podatkowa
@@ -12,4 +14,9 @@ import spock.lang.Ignore
  */
 class IncomeTaxUnitTest extends AbstractUnitTest {
 
+
+
+//    def "should calculate income tax given form of taxation is PROGRESSIVE SCALE and lower tax band"() {
+//
+//    }
 }
